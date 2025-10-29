@@ -11,4 +11,5 @@
   inherit sources self;
   # Allow using "${self}" to use the project path
   # outPath = ./.;
+  pkgs = import ./pkgs args;
 }
