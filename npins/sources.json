@@ -1,10 +1,309 @@
 {
   "pins": {
+    "aquamarine": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "aquamarine"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "62479232aae42c1ef09c2c027c8cfd91df060897",
+      "url": "https://github.com/hyprwm/aquamarine/archive/62479232aae42c1ef09c2c027c8cfd91df060897.tar.gz",
+      "hash": "10qnwr6ag5nhhgirdwfjaiy5icr9lafy1bk26ldvfdc6ks5844ck"
+    },
+    "hyprcursor": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprcursor"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "44e91d467bdad8dcf8bbd2ac7cf49972540980a5",
+      "url": "https://github.com/hyprwm/hyprcursor/archive/44e91d467bdad8dcf8bbd2ac7cf49972540980a5.tar.gz",
+      "hash": "08vqkyfws2v4w0631xij4qbnncmci3vs0iyw0373zvsqy1nrm2ll"
+    },
+    "hyprgraphics": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprgraphics"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "50fb9f069219f338a11cf0bcccb9e58357d67757",
+      "url": "https://github.com/hyprwm/hyprgraphics/archive/50fb9f069219f338a11cf0bcccb9e58357d67757.tar.gz",
+      "hash": "04inm8pnd7b6n96k49f4zfam48qsnglj3rhs2m7m3pvhlwps6wbx"
+    },
+    "hypridle": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hypridle"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "f158b2fe9293f9b25f681b8e46d84674e7bc7f01",
+      "url": "https://github.com/hyprwm/hypridle/archive/f158b2fe9293f9b25f681b8e46d84674e7bc7f01.tar.gz",
+      "hash": "0pmnnjpbhjfbars3s1kr6iv57rcwr6a2sw446dzfayvvmkcihncd"
+    },
+    "hyprland": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprland"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "83a0a62004ee915921ac36a96760944ad6550e1e",
+      "url": "https://github.com/hyprwm/hyprland/archive/83a0a62004ee915921ac36a96760944ad6550e1e.tar.gz",
+      "hash": "0l3x2prl4yn7kg50xr9lqhcncngnmm6bwyb004l1bamr36znaklv"
+    },
+    "hyprland-protocols": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprland-protocols"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "bd153e76f751f150a09328dbdeb5e4fab9d23622",
+      "url": "https://github.com/hyprwm/hyprland-protocols/archive/bd153e76f751f150a09328dbdeb5e4fab9d23622.tar.gz",
+      "hash": "10mnr5sni5cnc0n5q4jhp197gh8d32pjwlx7dgz0rwsyl2f1b8gq"
+    },
+    "hyprland-qt-support": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprland-qt-support"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "9ef7f6970fad4522ee14c9083352f7f03b800190",
+      "url": "https://github.com/hyprwm/hyprland-qt-support/archive/9ef7f6970fad4522ee14c9083352f7f03b800190.tar.gz",
+      "hash": "1b9qm6w1ja9b2ia56an6z5ka7z8fgbnp0aflf76zjm433indh6z1"
+    },
+    "hyprland-qtutils": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprland-qtutils"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "629b15c19fa4082e4ce6be09fdb89e8c3312aed7",
+      "url": "https://github.com/hyprwm/hyprland-qtutils/archive/629b15c19fa4082e4ce6be09fdb89e8c3312aed7.tar.gz",
+      "hash": "0fc5sj3c24r2v8jxllmwwcadzwixn6g76lsa2xkmhkxl6q1fh026"
+    },
+    "hyprlang": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprlang"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "4dafa28d4f79877d67a7d1a654cddccf8ebf15da",
+      "url": "https://github.com/hyprwm/hyprlang/archive/4dafa28d4f79877d67a7d1a654cddccf8ebf15da.tar.gz",
+      "hash": "0w5kk1zmcf1igc2w30k1awaf58j326qxk9fap2pqzxycrrv0r61d"
+    },
+    "hyprlauncher": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprlauncher"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "252f930d447d4d327314cc266027fb971f37d6e9",
+      "url": "https://github.com/hyprwm/hyprlauncher/archive/252f930d447d4d327314cc266027fb971f37d6e9.tar.gz",
+      "hash": "0rp9wk1kp1lrsc8za499j7w1yrdakzf4n6ihsl85r5kr2qp3i8b0"
+    },
+    "hyprlock": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprlock"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "98b86752fe4867bd14ef96a92ea788229af93130",
+      "url": "https://github.com/hyprwm/hyprlock/archive/98b86752fe4867bd14ef96a92ea788229af93130.tar.gz",
+      "hash": "1apigmzfs060phz1krmy4h82vj80namj094adys7fxvn60s67p8j"
+    },
+    "hyprpaper": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprpaper"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "1733e0025b194c9bc083f4cd8782c5f151858a58",
+      "url": "https://github.com/hyprwm/hyprpaper/archive/1733e0025b194c9bc083f4cd8782c5f151858a58.tar.gz",
+      "hash": "1g9d2yp5gsyv6b0gvvw6dz9f97nqqs34pbmkwdpvb75zi8rv3wwp"
+    },
+    "hyprpicker": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprpicker"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "cd7ba93fadabe391aa8a6e6db6fc9bcdb9e2c428",
+      "url": "https://github.com/hyprwm/hyprpicker/archive/cd7ba93fadabe391aa8a6e6db6fc9bcdb9e2c428.tar.gz",
+      "hash": "14q4ih774qflsqxwq0ack9pg4q8h0zfjgadj750zj9z4xdl7k1fq"
+    },
+    "hyprpolkitagent": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprpolkitagent"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "7e4054410f6d6331b239fea1c659ad6a917fbf6a",
+      "url": "https://github.com/hyprwm/hyprpolkitagent/archive/7e4054410f6d6331b239fea1c659ad6a917fbf6a.tar.gz",
+      "hash": "021r0gjy2xip0jwsv0k823k156gsa7s3rylwai53ymxd53m51p6z"
+    },
+    "hyprpwcenter": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprpwcenter"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "f78e874e7437ae0187eafebd4bbc1044a1875655",
+      "url": "https://github.com/hyprwm/hyprpwcenter/archive/f78e874e7437ae0187eafebd4bbc1044a1875655.tar.gz",
+      "hash": "0qy7w8wa5770qdh32fz1a9wqiajbxbn8hy1spip9v4w8y38y2p2k"
+    },
+    "hyprqt6engine": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprqt6engine"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "7f5d00163e681e523e97ddb058bc1198fa5780d6",
+      "url": "https://github.com/hyprwm/hyprqt6engine/archive/7f5d00163e681e523e97ddb058bc1198fa5780d6.tar.gz",
+      "hash": "0nxjldhh4sv9s4wxvwlzcr8ndwl098ldkckfbvq3ifaw1iy6md0y"
+    },
+    "hyprsunset": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprsunset"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "adac50b0ecf24871223bfa62dc6de6616b321e3c",
+      "url": "https://github.com/hyprwm/hyprsunset/archive/adac50b0ecf24871223bfa62dc6de6616b321e3c.tar.gz",
+      "hash": "0mjmwdsqg1s6jlg5pa5mmcgds2lkj3cn619dgrqk8a7zbyxbv1bw"
+    },
+    "hyprsysteminfo": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprsysteminfo"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "fe81610278676d26ff47f62770ac238220285d3a",
+      "url": "https://github.com/hyprwm/hyprsysteminfo/archive/fe81610278676d26ff47f62770ac238220285d3a.tar.gz",
+      "hash": "1zwwwavdy2vcf695xsyr11310p2qhnhfggy2k2jqbxa0bxc1wipj"
+    },
+    "hyprtoolkit": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprtoolkit"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "0d1c886d5f7d0864b4c67c9dbfe460e821aecb3c",
+      "url": "https://github.com/hyprwm/hyprtoolkit/archive/0d1c886d5f7d0864b4c67c9dbfe460e821aecb3c.tar.gz",
+      "hash": "1wr5msaay1c630hv86lnrz807kcy0pgdp89ndgjw1h5ijbbkyck1"
+    },
+    "hyprutils": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprutils"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "3df7bde01efb3a3e8e678d1155f2aa3f19e177ef",
+      "url": "https://github.com/hyprwm/hyprutils/archive/3df7bde01efb3a3e8e678d1155f2aa3f19e177ef.tar.gz",
+      "hash": "0l4gdingspjv3fh7zkmdin37bjjxgxnxycn8agv4cr3n0kn9smxg"
+    },
+    "hyprwayland-scanner": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprwayland-scanner"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "b3b0f1f40ae09d4447c20608e5a4faf8bf3c492d",
+      "url": "https://github.com/hyprwm/hyprwayland-scanner/archive/b3b0f1f40ae09d4447c20608e5a4faf8bf3c492d.tar.gz",
+      "hash": "1g01qnp76ka841qlv958vh4vl2dbs6vjj6j85is3003frhvm0824"
+    },
+    "hyprwire": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprwire"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "a5946085ab7705d7b75b77a91ce8fca7faf0dc34",
+      "url": "https://github.com/hyprwm/hyprwire/archive/a5946085ab7705d7b75b77a91ce8fca7faf0dc34.tar.gz",
+      "hash": "0bg7r6fmsfc8pmb595l98c86kd6scka58q9qh3ibwmj926pz50hj"
+    },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixpkgs-unstable",
       "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.11pre885943.e99366c665bd/nixexprs.tar.xz",
       "hash": "1cl8gphr2r9yz5qxn4r85bcgdba23igjc269dv4jajw9r50xgij6"
+    },
+    "xdg-desktop-portal-hyprland": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "xdg-desktop-portal-hyprland"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "4b8801228ff958d028f588f0c2b911dbf32297f9",
+      "url": "https://github.com/hyprwm/xdg-desktop-portal-hyprland/archive/4b8801228ff958d028f588f0c2b911dbf32297f9.tar.gz",
+      "hash": "0cmpzmyb46b2d7hfnpw980ciwybnv9lzhid381a0myvp4pac4f67"
     }
   },
   "version": 5
