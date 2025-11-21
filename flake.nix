@@ -1,20 +1,25 @@
 {
-  description = "My private repo with multiple targets";
+  description = "Hypr* ecosystem stable release flakes";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-  outputs = { self, nixpkgs }:
+    hyprland.url = "path:./flakes/hyprland.nix";
+  }
+
+  outputs = { self, nixpkgs, hyprland }:
     let
       systems = [ "x86_64-linux" "aarch64-linux" ];
       forAllSystems = f:
         nixpkgs.lib.genAttrs systems (system:
-          f (import nixpkgs { inherit system; }));
+          f {
+            inherit system;
+            pkgs = import nixpkgs { inherit system; };
+          });
     in {
-      packages = forAllSystems (pkgs:
-        let
-          hyprland = import ./flakes/hyprland.nix { inherit pkgs; };
-        in {
-          hyprland = hyprland;
+      packages = forAllSystems ({ pkgs, system }:
+        {
+          hyprland = hyprland.packages.${system}.default;
         });
     };
 }
