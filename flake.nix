@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     hyprland.url = "path:./flakes/hyprland.nix";
-  }
+  };
 
   outputs = inputs @ { self, nixpkgs, hyprland, ... }: let
       systems = [ "x86_64-linux" "aarch64-linux" ];
