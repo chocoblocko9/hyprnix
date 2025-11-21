@@ -2,10 +2,11 @@
   description = "Wrapper flake for stable hyprutils";
 
   inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     hyprutils.url = "github:hyprwm/hyprutils/v0.10.2";
   };
 
-  outputs = { self, hyprutils, ... }:
+  outputs = { self, nixpkgs, hyprutils, ... }:
   let
     systems = [ "x86_64-linux" "aarch64-linux" ];
     forAllSystems = f:
@@ -15,8 +16,16 @@
       }) systems);
   in
   {
+    overlays.default = final: prev: {
+      hyprutils = final.callPackage ./default.nix { };
+    };
+
     packages = forAllSystems (system:
-      let defaultPkg = hyprutils.packages.${system}.default;
+      let
+        defaultPkg = import nixpkgs {
+          inherit system;
+          overlays = [ self.overlays.default ];
+        };
       in
       {
         hyprutils = defaultPkg;
