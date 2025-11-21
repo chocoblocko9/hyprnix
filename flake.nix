@@ -7,8 +7,7 @@
     hyprland.url = "path:./flakes/hyprland.nix";
   }
 
-  outputs = { self, nixpkgs, hyprland }:
-    let
+  outputs = inputs @ { self, nixpkgs, hyprland, ... }: let
       systems = [ "x86_64-linux" "aarch64-linux" ];
       forAllSystems = f:
         nixpkgs.lib.genAttrs systems (system:
