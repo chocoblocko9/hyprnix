@@ -2,7 +2,7 @@
   description = "Wrapper flake for stable Hyprland";
 
   inputs = {
-    hyprland.url = "github:hyprwm/Hyprland?tag=0.52.1";
+    hyprland.url = "github:hyprwm/Hyprland?rev=0.52.1";
   };
 
   outputs = { self, hyprland, ... }:
