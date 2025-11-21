@@ -17,7 +17,7 @@
   in
   {
     overlays.default = final: prev: {
-      hyprutils = final.callPackage ./flake.nix { };
+      hyprutils = final.callPackage ./nix/default.nix { };
     };
 
     packages = forAllSystems (system:
