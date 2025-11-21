@@ -16,7 +16,7 @@
   in
   {
     packages = forAllSystems (system:
-      let defaultPkg = hyprland.packages.${system}.default
+      let defaultPkg = hyprland.packages.${system}.default;
       in
       {
         hyprland = defaultPkg;
