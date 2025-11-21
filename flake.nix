@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    hyprland.url = "path:./flakes/hyprland.nix";
+    hyprland.url = "path:./flakes/hyprland";
   };
 
   outputs = inputs @ { self, nixpkgs, hyprland, ... }: let
