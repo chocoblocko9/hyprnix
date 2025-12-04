@@ -5,7 +5,7 @@
     hyprutils.url = "path:../hyprutils";
 
     # Hyprland package with overrides for stable deps
-    hyprland.url = "github:hyprwm/Hyprland/v0.52.1";
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?ref=v0.52.2";
 
     hyprland.inputs.hyprutils.follows = "hyprutils";
   };
