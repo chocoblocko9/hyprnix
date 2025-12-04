@@ -8,7 +8,7 @@
     hyprland = {
       type = "git";
       url = "https://github.com/hyprwm/Hyprland.git";
-      ref = "v0.52.2";
+      ref = "refs/tags/v0.52.2";
     };
 
     hyprland.inputs.hyprutils.follows = "hyprutils";
