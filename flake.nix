@@ -3,13 +3,100 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    systems.url = "github:nix-systems/default-linux";
 
-    hyprland.url = "path:./flakes/hyprland";
-    hyprutils.url = "path:./flakes/hyprutils";
+    aquamarine = {
+      url = "github:hyprwm/aquamarine/v0.10.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+    };
+
+    hyprcursor = {
+      url = "github:hyprwm/hyprcursor/v0.1.13";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprlang.follows = "hyprlang";
+    };
+
+    hyprgraphics = {
+      url = "github:hyprwm/hyprgraphics/v0.4.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprutils.follows = "hyprutils";
+    };
+
+    hyprland-protocols = {
+      url = "github:hyprwm/hyprland-protocols/v0.7.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+    };
+
+    hyprland-guiutils = {
+      url = "github:hyprwm/hyprland-guiutils/v0.2.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.aquamarine.follows = "aquamarine";
+      inputs.hyprgraphics.follows = "hyprgraphics";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprlang.follows = "hyprlang";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+    };
+
+    hyprlang = {
+      url = "github:hyprwm/hyprlang/v0.6.7";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprutils.follows = "hyprutils";
+    };
+
+    hyprutils = {
+      url = "github:hyprwm/hyprutils/v0.11.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+    };
+
+    hyprwayland-scanner = {
+      url = "github:hyprwm/hyprwayland-scanner/v0.4.5";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+    };
+
+    hyprwire = {
+      url = "github:hyprwm/hyprwire/v0.2.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprutils.follows = "hyprutils";
+    };
+
+    xdph = {
+      url = "github:hyprwm/xdg-desktop-portal-hyprland/v1.3.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprland-protocols.follows = "hyprland-protocols";
+      inputs.hyprlang.follows = "hyprlang";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+    };
+
+    hyprland = {
+      url = "github:hyprwm/hyprland/v0.52.2";
+      inputs.aquamarine.follows = "aquamarine";
+      inputs.hyprcursor.follows = "hyprcursor";
+      inputs.hyprgraphics.follows = "hyprgraphics";
+      inputs.hyprland-protocols.follows = "hyprland-protocols";
+      inputs.hyprland-guiutils.follows = "hyprland-guiutils";
+      inputs.hyprlang.follows = "hyprlang";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+      inputs.hyprwire.follows = "hyprwire";
+      inputs.xdph.follows = "xdph";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, hyprland, hyprutils, ... }: let
-      systems = [ "x86_64-linux" "aarch64-linux" ];
+  outputs = inputs @ { self, nixpkgs, ... }: let
+      systems = import inputs.systems;
       forAllSystems = f:
         nixpkgs.lib.genAttrs systems (system:
           f {
@@ -19,8 +106,18 @@
     in {
       packages = forAllSystems ({ pkgs, system }:
         {
-          hyprland = hyprland.packages.${system}.default;
-          hyprutils = hyprutils.packages.${system}.default;
+          default = self.packages.${system}.hyprland;
+          inherit (inputs.hyprland.packages.${system}) hyprland;
+          inherit (inputs.hyprutils.packages.${system}) hyprutils;
+          inherit (inputs.hyprcursor.packages.${system}) hyprcursor;
+          inherit (inputs.aquamarine.packages.${system}) aquamarine;
+          inherit (inputs.hyprgraphics.packages.${system}) hyprgraphics;
+          inherit (inputs.hyprland-protocols.packages.${system}) hyprland-protocols;
+          inherit (inputs.hyprland-guiutils.packages.${system}) hyprland-guiutils;
+          inherit (inputs.hyprlang.packages.${system}) hyprlang;
+          inherit (inputs.hyprwayland-scanner.packages.${system}) hyprwayland-scanner;
+          inherit (inputs.hyprwire.packages.${system}) hyprwire;
+          inherit (inputs.xdph.packages.${system}) xdg-desktop-portal-hyprland;
         });
     };
 }
