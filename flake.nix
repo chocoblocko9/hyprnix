@@ -34,7 +34,7 @@
     };
 
     hyprland-guiutils = {
-      url = "github:hyprwm/hyprland-guiutils/v0.2.0";
+      url = "github:hyprwm/hyprland-guiutils/v0.2.1";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.systems.follows = "systems";
       inputs.aquamarine.follows = "aquamarine";
@@ -81,7 +81,7 @@
     };
 
     hyprland = {
-      url = "github:hyprwm/hyprland/v0.52.2";
+      url = "github:hyprwm/hyprland/v0.53.0";
       inputs.aquamarine.follows = "aquamarine";
       inputs.hyprcursor.follows = "hyprcursor";
       inputs.hyprgraphics.follows = "hyprgraphics";
