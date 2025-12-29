@@ -12,7 +12,7 @@
     hyprland-guiutils = {
       type = "git";
       url = "https://github.com/hyprwm/hyprland-guiutils.git";
-      ref = "refs/tags/v0.2.0";
+      ref = "refs/tags/v0.2.1";
     };
 
     hyprland-guiutils.inputs.hyprutils.follows = "hyprutils";
