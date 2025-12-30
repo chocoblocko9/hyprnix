@@ -103,6 +103,11 @@
       inputs.hyprwire.follows = "hyprwire";
       inputs.xdph.follows = "xdph";
     };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins/v0.53.0";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = inputs @ { self, nixpkgs, ... }: let
@@ -129,6 +134,9 @@
           inherit (inputs.hyprwayland-scanner.packages.${system}) hyprwayland-scanner;
           inherit (inputs.hyprwire.packages.${system}) hyprwire;
           inherit (inputs.xdph.packages.${system}) xdg-desktop-portal-hyprland;
-        });
+        }
+        //
+        inputs.hyprland-plugins.packages.${system}
+      );
     };
 }
