@@ -37,6 +37,16 @@
       inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
     };
 
+    hyprlock = {
+      url = "github:hyprwm/hyprlock/v0.9.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprgraphics.follows = "hyprgraphics";
+      inputs.hyprlang.follows = "hyprlang";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+    };
+
     hyprland-protocols = {
       url = "github:hyprwm/hyprland-protocols/v0.7.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -148,6 +158,7 @@
           inherit (inputs.hyprcursor.packages.${system}) hyprcursor;
           inherit (inputs.hyprgraphics.packages.${system}) hyprgraphics;
           inherit (inputs.hypridle.packages.${system}) hypridle;
+          inherit (inputs.hyprlock.packages.${system}) hyprlock;
           inherit (inputs.hyprland-guiutils.packages.${system}) hyprland-guiutils;
           inherit (inputs.hyprland.packages.${system}) hyprland;
           inherit (inputs.hyprland-protocols.packages.${system}) hyprland-protocols;
