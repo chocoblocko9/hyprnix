@@ -147,6 +147,8 @@
 
     hyprpaper = {
       url = "github:hyprwm/hyprpaper/v0.8.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
       inputs.aquamarine.follows = "aquamarine";
       inputs.hyprgraphics.follows = "hyprgraphics";
       inputs.hyprlang.follows = "hyprlang";
@@ -154,6 +156,14 @@
       inputs.hyprutils.follows = "hyprutils";
       inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
       inputs.hyprwire.follows = "hyprwire";
+    };
+
+    hyprpicker = {
+      url = "github:hyprwm/hyprpicker/v0.4.5";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
     };
   };
 
@@ -180,6 +190,7 @@
           inherit (inputs.hyprlang.packages.${system}) hyprlang;
           inherit (inputs.hyprlauncher.packages.${system}) hyprlauncher;
           inherit (inputs.hyprpaper.packages.${system}) hyprpaper;
+          inherit (inputs.hyprpicker.packages.${system}) hyprpicker;
           inherit (inputs.hyprtoolkit.packages.${system}) hyprtoolkit;
           inherit (inputs.hyprutils.packages.${system}) hyprutils;
           inherit (inputs.hyprwayland-scanner.packages.${system}) hyprwayland-scanner;
