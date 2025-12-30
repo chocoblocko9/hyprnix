@@ -180,6 +180,16 @@
       inputs.hyprutils.follows = "hyprutils";
       inputs.hyprland-qt-support.follows = "hyprland-qt-support";
     };
+
+    hyprsunset = {
+      url = "github:hyprwm/hyprsunset/v0.3.3";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprland-protocols.follows = "hyprland-protocols";
+      inputs.hyprlang.follows = "hyprlang";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+    };
   };
 
   outputs = inputs @ { self, nixpkgs, ... }: let
@@ -208,6 +218,7 @@
           inherit (inputs.hyprpaper.packages.${system}) hyprpaper;
           inherit (inputs.hyprpicker.packages.${system}) hyprpicker;
           inherit (inputs.hyprpolkitagent.packages.${system}) hyprpolkitagent;
+          inherit (inputs.hyprsunset.packages.${system}) hyprsunset;
           inherit (inputs.hyprtoolkit.packages.${system}) hyprtoolkit;
           inherit (inputs.hyprutils.packages.${system}) hyprutils;
           inherit (inputs.hyprwayland-scanner.packages.${system}) hyprwayland-scanner;
