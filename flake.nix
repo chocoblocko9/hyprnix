@@ -237,5 +237,7 @@
       );
 
       formatter = forAllSystems ({ pkgs, ... }: pkgs.nixfmt-tree);
+
+      checks = self.packages;
     };
 }
