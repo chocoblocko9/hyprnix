@@ -165,6 +165,21 @@
       inputs.hyprutils.follows = "hyprutils";
       inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
     };
+
+    hyprland-qt-support = {
+      url = "github:hyprwm/hyprland-qt-support/v0.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprlang.follows = "hyprlang";
+    };
+
+    hyprpolkitagent = {
+      url = "github:hyprwm/hyprpolkitagent/v0.1.3";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprland-qt-support.follows = "hyprland-qt-support";
+    };
   };
 
   outputs = inputs @ { self, nixpkgs, ... }: let
@@ -187,10 +202,12 @@
           inherit (inputs.hyprland-guiutils.packages.${system}) hyprland-guiutils;
           inherit (inputs.hyprland.packages.${system}) hyprland;
           inherit (inputs.hyprland-protocols.packages.${system}) hyprland-protocols;
+          inherit (inputs.hyprland-qt-support.packages.${system}) hyprland-qt-support;
           inherit (inputs.hyprlang.packages.${system}) hyprlang;
           inherit (inputs.hyprlauncher.packages.${system}) hyprlauncher;
           inherit (inputs.hyprpaper.packages.${system}) hyprpaper;
           inherit (inputs.hyprpicker.packages.${system}) hyprpicker;
+          inherit (inputs.hyprpolkitagent.packages.${system}) hyprpolkitagent;
           inherit (inputs.hyprtoolkit.packages.${system}) hyprtoolkit;
           inherit (inputs.hyprutils.packages.${system}) hyprutils;
           inherit (inputs.hyprwayland-scanner.packages.${system}) hyprwayland-scanner;
