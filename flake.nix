@@ -80,6 +80,17 @@
       inputs.hyprutils.follows = "hyprutils";
     };
 
+    hyprtoolkit = {
+      url = "github:hyprwm/hyprtoolkit/v0.5.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.aquamarine.follows = "aquamarine";
+      inputs.hyprgraphics.follows = "hyprgraphics";
+      inputs.hyprlang.follows = "hyprlang";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+    };
+
     xdph = {
       url = "github:hyprwm/xdg-desktop-portal-hyprland/v1.3.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -108,6 +119,17 @@
       url = "github:hyprwm/hyprland-plugins/v0.53.0";
       inputs.hyprland.follows = "hyprland";
     };
+
+    hyprlauncher = {
+      url = "github:hyprwm/hyprlauncher/v0.1.4";
+      inputs.aquamarine.follows = "aquamarine";
+      inputs.hyprgraphics.follows = "hyprgraphics";
+      inputs.hyprlang.follows = "hyprlang";
+      inputs.hyprtoolkit.follows = "hyprtoolkit";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+      inputs.hyprwire.follows = "hyprwire";
+    };
   };
 
   outputs = inputs @ { self, nixpkgs, ... }: let
@@ -130,6 +152,8 @@
           inherit (inputs.hyprland.packages.${system}) hyprland;
           inherit (inputs.hyprland-protocols.packages.${system}) hyprland-protocols;
           inherit (inputs.hyprlang.packages.${system}) hyprlang;
+          inherit (inputs.hyprlauncher.packages.${system}) hyprlauncher;
+          inherit (inputs.hyprtoolkit.packages.${system}) hyprtoolkit;
           inherit (inputs.hyprutils.packages.${system}) hyprutils;
           inherit (inputs.hyprwayland-scanner.packages.${system}) hyprwayland-scanner;
           inherit (inputs.hyprwire.packages.${system}) hyprwire;
