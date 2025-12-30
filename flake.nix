@@ -193,16 +193,23 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, ... }: let
+  outputs =
+    inputs@{ self, nixpkgs, ... }:
+    let
       systems = import inputs.systems;
-      forAllSystems = f:
-        nixpkgs.lib.genAttrs systems (system:
+      forAllSystems =
+        f:
+        nixpkgs.lib.genAttrs systems (
+          system:
           f {
             inherit system;
             pkgs = import nixpkgs { inherit system; };
-          });
-    in {
-      packages = forAllSystems ({ pkgs, system }:
+          }
+        );
+    in
+    {
+      packages = forAllSystems (
+        { system, ... }:
         {
           default = self.packages.${system}.hyprland;
           inherit (inputs.aquamarine.packages.${system}) aquamarine;
@@ -226,8 +233,9 @@
           inherit (inputs.hyprwire.packages.${system}) hyprwire;
           inherit (inputs.xdph.packages.${system}) xdg-desktop-portal-hyprland;
         }
-        //
-        inputs.hyprland-plugins.packages.${system}
+        // inputs.hyprland-plugins.packages.${system}
       );
+
+      formatter = forAllSystems ({ pkgs, ... }: pkgs.nixfmt-tree);
     };
 }
