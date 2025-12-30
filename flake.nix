@@ -27,6 +27,16 @@
       inputs.hyprutils.follows = "hyprutils";
     };
 
+    hypridle = {
+      url = "github:hyprwm/hypridle/v0.1.7";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprland-protocols.follows = "hyprland-protocols";
+      inputs.hyprlang.follows = "hyprlang";
+      inputs.hyprutils.follows = "hyprutils";
+      inputs.hyprwayland-scanner.follows = "hyprwayland-scanner";
+    };
+
     hyprland-protocols = {
       url = "github:hyprwm/hyprland-protocols/v0.7.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -107,14 +117,15 @@
       packages = forAllSystems ({ pkgs, system }:
         {
           default = self.packages.${system}.hyprland;
-          inherit (inputs.hyprland.packages.${system}) hyprland;
-          inherit (inputs.hyprutils.packages.${system}) hyprutils;
-          inherit (inputs.hyprcursor.packages.${system}) hyprcursor;
           inherit (inputs.aquamarine.packages.${system}) aquamarine;
+          inherit (inputs.hyprcursor.packages.${system}) hyprcursor;
           inherit (inputs.hyprgraphics.packages.${system}) hyprgraphics;
-          inherit (inputs.hyprland-protocols.packages.${system}) hyprland-protocols;
+          inherit (inputs.hypridle.packages.${system}) hypridle;
           inherit (inputs.hyprland-guiutils.packages.${system}) hyprland-guiutils;
+          inherit (inputs.hyprland.packages.${system}) hyprland;
+          inherit (inputs.hyprland-protocols.packages.${system}) hyprland-protocols;
           inherit (inputs.hyprlang.packages.${system}) hyprlang;
+          inherit (inputs.hyprutils.packages.${system}) hyprutils;
           inherit (inputs.hyprwayland-scanner.packages.${system}) hyprwayland-scanner;
           inherit (inputs.hyprwire.packages.${system}) hyprwire;
           inherit (inputs.xdph.packages.${system}) xdg-desktop-portal-hyprland;
