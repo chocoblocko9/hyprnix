@@ -1,13 +1,28 @@
 # HyprWM Nix Repo
 
-Attempt at gathering all derivations in one place, just like Nixpkgs, but for the Hypr Ecosystem.
+Hypr Ecosystem releases in one place.
 
-## TODO
+## Packages
 
-- check how we can scale
-- check how to update npins on push (webhooks?)
-- check how to retrieve date of commit
-- check how to provide proper CI to respective repos
-- devshells?
+To view a list of all packages, either check the `flake.nix` file or run:
 
-I have a strong feeling this will be a failure. Regardless, I'll experiment.
+```sh
+nix flake show github:hyprwm/hyprnix
+```
+
+## Installing
+
+> [!IMPORTANT]
+> Make sure to set up [Cachix](https://wiki.hypr.land/Nix/Cachix/) before installing.
+
+> [!NOTE]
+> All snippets in the wiki that advise using `inputs.hyprland` should be changed to `inputs.hyprnix` instead.
+> `inputs.hyprland.url = "github:hyprwm/hyprland"` should be changed to `inputs.hyprnix.url = "github:hyprwm/hyprnix"`.
+
+### NixOS
+
+Follow the guide over at [Hyprland on NixOS](https://wiki.hypr.land/Nix/Hyprland-on-NixOS/).
+
+### Non-NixOS (other distros)
+
+Follow the guide over at [Hyprland on Other Distros](https://wiki.hypr.land/Nix/Hyprland-on-other-distros/).
