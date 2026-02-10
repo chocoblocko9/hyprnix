@@ -142,6 +142,14 @@
       inputs.hyprutils.follows = "hyprutils";
     };
 
+    hyprpwcenter = {
+      url = "github:hyprwm/hyprpwcenter/v0.1.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+      inputs.hyprtoolkit.follows = "hyprtoolkit";
+      inputs.hyprutils.follows = "hyprutils";
+    };
+
     hyprshutdown = {
       url = "github:hyprwm/hyprshutdown/v0.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -234,6 +242,7 @@
           inherit (inputs.hyprpaper.packages.${system}) hyprpaper;
           inherit (inputs.hyprpicker.packages.${system}) hyprpicker;
           inherit (inputs.hyprpolkitagent.packages.${system}) hyprpolkitagent;
+          inherit (inputs.hyprpwcenter.packages.${system}) hyprpwcenter;
           inherit (inputs.hyprshutdown.packages.${system}) hyprshutdown;
           inherit (inputs.hyprsunset.packages.${system}) hyprsunset;
           inherit (inputs.hyprtoolkit.packages.${system}) hyprtoolkit;
